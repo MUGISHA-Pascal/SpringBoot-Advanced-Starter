@@ -1,4 +1,4 @@
-package com.starter.backend.controllers;
+package com.starter.backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
