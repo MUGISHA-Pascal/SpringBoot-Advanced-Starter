@@ -92,7 +92,19 @@
 			<version>[2.9.2,)</version>
 		</dependency>
 
+		<!-- Passay for password validation -->
+		<dependency>
+			<groupId>org.passay</groupId>
+			<artifactId>passay</artifactId>
+			<version>[1.6.0,)</version> <!-- Check for the latest version -->
+		</dependency>
 
+		<!-- Guava for utility methods like Joiner -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>[31.1-jre,)</version> <!-- Check for the latest version -->
+		</dependency>
 		<!-- JJWT for JSON Web Token support -->
 <!--		<dependency>-->
 <!--			<groupId>io.jsonwebtoken</groupId>-->
@@ -126,12 +138,7 @@
 <!--			<version>3.12.0</version>-->
 <!--		</dependency>-->
 
-		<!-- Passay for password validation -->
-<!--		<dependency>-->
-<!--			<groupId>org.passay</groupId>-->
-<!--			<artifactId>passay</artifactId>-->
-<!--			<version>1.6.1</version>-->
-<!--		</dependency>-->
+
 
 		<!-- Apache Commons Text for string manipulation -->
 <!--		<dependency>-->
@@ -162,12 +169,7 @@
 <!--			<scope>test</scope>-->
 <!--		</dependency>-->
 
-<!--		&lt;!&ndash; Guava library &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.google.guava</groupId>-->
-<!--			<artifactId>guava</artifactId>-->
-<!--			<version>31.0-jre</version>-->
-<!--		</dependency>-->
+
 
 <!--		&lt;!&ndash; JUnit for testing &ndash;&gt;-->
 <!--		<dependency>-->
