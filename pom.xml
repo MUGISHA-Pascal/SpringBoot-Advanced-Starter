@@ -58,7 +58,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>42.7.5</version>
+			<version>[42.7.5,)</version>
 		</dependency>
 
 		<!-- Lombok for code simplicity -->
@@ -91,6 +91,18 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>[2.9.2,)</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson</groupId>
+			<artifactId>jackson-bom</artifactId>
+			<version>[2.15.2,)</version>
+			<scope>import</scope>
+			<type>pom</type>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springdoc</groupId>-->
+<!--			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>-->
+<!--			<version>[2.1.0,)</version>-->
+<!--		</dependency>-->
 
 		<!-- Passay for password validation -->
 		<dependency>
