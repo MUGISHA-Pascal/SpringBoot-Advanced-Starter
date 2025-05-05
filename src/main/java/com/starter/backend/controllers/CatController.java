@@ -39,4 +39,9 @@ public class CatController {
     public ResponseEntity<?> deleteCat(@PathVariable UUID id){
         return this.catService.deleteCat(id);
     }
+    @PutMapping("/{id}")
+    @ApiOperation(value = "update cat",notes = "update cat by id")
+    public Cat updateCat(@RequestBody CatDto cat,@PathVariable UUID id){
+        return this.catService.updateCat(cat,id);
+    }
 }
