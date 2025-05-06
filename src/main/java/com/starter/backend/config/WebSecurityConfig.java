@@ -81,10 +81,12 @@ public class WebSecurityConfig {
                                 new AntPathRequestMatcher("/swagger-resources/**"),
                                 new AntPathRequestMatcher("/configuration/security"),
                                 new AntPathRequestMatcher("/swagger-ui.html"),
+                                new AntPathRequestMatcher("/swagger-ui/index.html"),
                                 new AntPathRequestMatcher("/webjars/**"),
                                 new AntPathRequestMatcher("/api/v1/auth/**"),
-                                new AntPathRequestMatcher("/api/v1/cats/**")
-                        ).permitAll()
+                                new AntPathRequestMatcher("/api/v1/cats/**"),
+                                new AntPathRequestMatcher("/api/v1/users/**")
+                                ).permitAll()
                         .anyRequest().authenticated()
                 );
 
