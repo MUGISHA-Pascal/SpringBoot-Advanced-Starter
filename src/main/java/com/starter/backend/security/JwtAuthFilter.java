@@ -36,6 +36,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
             if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
                 String userId = tokenProvider.getUserIdFromToken(jwt);
+                System.out.println("user id in token "+userId);
                 UserDetails userDetails = customUserDetailsService.loadUserById(UUID.fromString(userId));
 
                 if (SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -55,9 +56,17 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
     private String getJwtFromRequest(HttpServletRequest request) {
         String bearerToken = request.getHeader("Authorization");
+        System.out.println("authentication token on retrival "+bearerToken);
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
+            System.out.println("validity is good "+bearerToken.substring(7));
             return bearerToken.substring(7); // remove "Bearer "
         }
         return null;
     }
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        return path.startsWith("/swagger-ui.html") || path.startsWith("/swagger-ui/index.html");
+    }
+
 }

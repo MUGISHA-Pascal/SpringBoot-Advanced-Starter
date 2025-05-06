@@ -38,7 +38,6 @@ public class ProductService {
                 .orElseThrow(() -> new ApiRequestException("Product with id " + id + " not found"));
     }
 
-    // ✅ Update method
     public Product updateProduct(UUID id, ProductDto productDto){
         Product existingProduct = productRepository.findById(id)
                 .orElseThrow(() -> new ApiRequestException("Product with id " + id + " not found"));
@@ -52,10 +51,13 @@ public class ProductService {
         return productRepository.save(existingProduct);
     }
 
-    // ✅ Delete method
     public void deleteProduct(UUID id){
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ApiRequestException("Product with id " + id + " not found"));
         productRepository.delete(product);
+    }
+    public List<Product> findProductsByCategory(String category){
+        List<Product> products = productRepository.findByCategory(category);
+        return products;
     }
 }

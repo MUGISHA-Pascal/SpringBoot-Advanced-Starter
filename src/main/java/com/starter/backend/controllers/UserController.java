@@ -5,7 +5,7 @@ import com.starter.backend.models.User;
 import com.starter.backend.payload.ApiResponse;
 import com.starter.backend.services.UserService;
 import com.starter.backend.util.Constants;
-import io.swagger.annotations.ApiParam;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,7 +26,7 @@ private UserService userService;
     return userService.getAllUsers(page,size);
 }
 @DeleteMapping(path = "/{userId}")
-    public ResponseEntity<ApiResponse> deleteUser(@ApiParam(value = "userId",required = true) @PathVariable("userId") UUID userId){
+    public ResponseEntity<ApiResponse> deleteUser(@Parameter(description = "userId",required = true) @PathVariable("userId") UUID userId){
     return ResponseEntity.ok(new ApiResponse(true,"user removed successfully",userService.deleteUser(userId)));
 }
 @PutMapping(path = "/{userId}")
@@ -37,7 +37,7 @@ private UserService userService;
     return ResponseEntity.created(location).body(new ApiResponse(true,"user updated successfully",user));
 }
 @GetMapping(path = "/{userId}")
-    public ResponseEntity<ApiResponse> getUser(@ApiParam(value="Get user by id",required = true) @PathVariable("userId") UUID userId ){
+    public ResponseEntity<ApiResponse> getUser(@Parameter(description="Get user by id",required = true) @PathVariable("userId") UUID userId ){
     return ResponseEntity.ok(new ApiResponse(true,"user found",this.userService.getUser(userId)));
 }
 }

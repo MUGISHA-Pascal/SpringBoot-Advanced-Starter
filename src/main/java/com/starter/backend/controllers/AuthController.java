@@ -11,7 +11,8 @@ import com.starter.backend.repository.UserRepository;
 import com.starter.backend.security.JwtTokenProvider;
 import com.starter.backend.services.UserService;
 import com.starter.backend.util.Response;
-import io.swagger.annotations.ApiOperation;
+
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,7 +43,7 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
     @PostMapping(path = "/signin")
-    @ApiOperation(value = "signin into your account")
+    @Operation(summary = "signin into your account")
     public ResponseEntity<JwtAuthResponse> signin(@Valid @RequestBody SIgninDto signInRequest){
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(signInRequest.getEmail(),signInRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
@@ -56,7 +57,7 @@ public class AuthController {
         return ResponseEntity.ok(new JwtAuthResponse(jwt));
     }
     @PostMapping(path = "/signup")
-    @ApiOperation(value="create new user",response= User.class)
+    @Operation(summary="create new user")
     public ResponseEntity<Response> signup(@RequestBody @Valid SignupDto signupRequest){
         User user = new User(signupRequest.getEmail(),signupRequest.getFirstName(),signupRequest.getLastName(),signupRequest.getMobile(),signupRequest.getGender(),signupRequest.getPassword());
         boolean userExists = userRepository.findByEmail(user.getEmail()).isPresent();
