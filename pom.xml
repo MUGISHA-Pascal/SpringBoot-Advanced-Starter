@@ -74,11 +74,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>[2.15.2,)</version>
-		</dependency>
+
 
 		<!-- Swagger dependencies -->
 		<dependency>
@@ -87,15 +83,15 @@
 			<version>[2.3.0,)</version> <!-- Or latest -->
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>com.fasterxml.jackson</groupId>
 			<artifactId>jackson-bom</artifactId>
-			<version>[2.15.2,)</version>
-			<scope>import</scope>
+			<version>2.13.5</version>
 			<type>pom</type>
+			<scope>import</scope>
 		</dependency>
+
+
 <!--		<dependency>-->
 <!--			<groupId>org.springdoc</groupId>-->
 <!--			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>-->

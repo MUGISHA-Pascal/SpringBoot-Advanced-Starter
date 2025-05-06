@@ -77,6 +77,7 @@ public class WebSecurityConfig {
                                 new AntPathRequestMatcher("/**/*.css"),
                                 new AntPathRequestMatcher("/**/*.js"),
                                 new AntPathRequestMatcher("/v2/api-docs"),
+                                new AntPathRequestMatcher("/v3/api-docs/**"),
                                 new AntPathRequestMatcher("/configuration/ui"),
                                 new AntPathRequestMatcher("/swagger-resources/**"),
                                 new AntPathRequestMatcher("/configuration/security"),
