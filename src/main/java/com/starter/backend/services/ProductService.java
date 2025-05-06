@@ -4,7 +4,12 @@ import com.starter.backend.dtos.ProductDto;
 import com.starter.backend.exceptions.ApiRequestException;
 import com.starter.backend.models.Product;
 import com.starter.backend.repository.ProductRepository;
+import com.starter.backend.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -58,6 +63,12 @@ public class ProductService {
     }
     public List<Product> findProductsByCategory(String category){
         List<Product> products = productRepository.findByCategory(category);
+        return products;
+    }
+    public Page<Product> productsPagination(int page,int size,String column){
+        Constants.validatePageNumberAndPageSize(page,size);
+        Pageable pageable =(Pageable) PageRequest.of(page,size, Sort.Direction.ASC,column);
+        Page<Product> products = productRepository.findAll(pageable);
         return products;
     }
 }
