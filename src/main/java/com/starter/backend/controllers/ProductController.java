@@ -20,31 +20,26 @@ public class ProductController {
         this.productService = productService;
     }
 
-    // GET all products
     @GetMapping
     public List<Product> getAllProducts(){
         return productService.getAllProducts();
     }
 
-    // GET product by ID
     @GetMapping("/{id}")
     public Product getProduct(@PathVariable UUID id){
         return productService.getProduct(id);
     }
 
-    // POST - Add new product
     @PostMapping
     public Product addProduct(@RequestBody ProductDto productDto){
         return productService.addProduct(productDto);
     }
 
-    // PUT - Update product
     @PutMapping("/{id}")
     public Product updateProduct(@PathVariable UUID id, @RequestBody ProductDto productDto){
         return productService.updateProduct(id, productDto);
     }
 
-    // DELETE product
     @DeleteMapping("/{id}")
     public String deleteProduct(@PathVariable UUID id){
         productService.deleteProduct(id);
