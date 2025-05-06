@@ -37,9 +37,9 @@ public class UserService {
 
    return user;
     }
-    public Page<User> getAllUsers(int page,int size){
+    public Page<User> getAllUsers(int page,int size,String column){
         Constants.validatePageNumberAndPageSize(page,size);
-        Pageable pageable = (Pageable) PageRequest.of(page,size, Sort.Direction.ASC,"firstName");
+        Pageable pageable = (Pageable) PageRequest.of(page,size, Sort.Direction.ASC,column);
         Page<User> users = userRepository.findAll(pageable);
         return users;
     }
