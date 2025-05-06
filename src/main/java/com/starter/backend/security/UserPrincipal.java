@@ -27,7 +27,7 @@ public class UserPrincipal implements UserDetails {
     private Collection<? extends GrantedAuthority>  authorities;
     public static UserPrincipal create(User user){
         List<GrantedAuthority> authorities = user.getRoles().stream().map(role -> new SimpleGrantedAuthority(role.getName().name())).collect(Collectors.toList());
-        return new UserPrincipal(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName(),user.getPassword(),user.getMobile(),authorities);
+        return new UserPrincipal(user.getId(),user.getEmail(),user.getFirstName(),user.getLastName(),user.getMobile(),user.getPassword(),authorities);
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
@@ -35,6 +35,8 @@ public class UserPrincipal implements UserDetails {
     }
     @Override
     public String getPassword(){
+
+        System.out.println("password being called "+password);
         return password;
     }
     @Override

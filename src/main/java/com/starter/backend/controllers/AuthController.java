@@ -50,6 +50,7 @@ public class AuthController {
         try{
             jwt=jwtTokenProvider.generateToken(authentication);
         }catch(Exception e){
+            System.out.println("error generating jwt");
             e.printStackTrace();
         }
         return ResponseEntity.ok(new JwtAuthResponse(jwt));

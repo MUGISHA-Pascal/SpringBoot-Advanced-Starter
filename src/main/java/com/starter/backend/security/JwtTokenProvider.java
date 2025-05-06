@@ -34,8 +34,15 @@ public class JwtTokenProvider {
           grantedAuthorities.add(new SimpleGrantedAuthority(role.getAuthority()));
         }
         User authUser = userRepository.findById(userPrincipal.getId()).get();
-        String token = Jwts.builder().setId(authUser.getId().toString()).setSubject(userPrincipal.getId()+"").claim("authorities",grantedAuthorities).claim("user",authUser).setIssuedAt(new Date(System.currentTimeMillis())).setExpiration(expiryDate).signWith(SignatureAlgorithm.ES512,jwtSecret).compact();
-        return token;
+        System.out.println("authUser in the Jwt auth Provider"+authUser);
+        String token = Jwts.builder().setId(authUser.getId()+"")
+                .setSubject(userPrincipal.getId()+"")
+                .claim("authorities",grantedAuthorities)
+                .claim("user",authUser)
+                .setIssuedAt(new
+                        Date(System.currentTimeMillis())) .setExpiration(expiryDate)
+                .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
+        return  token;
     }
     public String getUserIdFromToken(String token) {
         Claims claims = Jwts.parser()
