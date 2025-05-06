@@ -25,4 +25,11 @@ public class Product {
     private int price;
     private int quantity;
     private String category;
+    public Product(String name, String description, int price, int quantity, String category) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.category = category;
+    }
 }
