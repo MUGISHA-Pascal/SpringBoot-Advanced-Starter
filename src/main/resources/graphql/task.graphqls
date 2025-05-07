@@ -1,3 +1,26 @@
 type Query {
-    hello: String
+    getAllTasks: [Task!]!
+}
+
+type Mutation {
+    addTask(input: TaskInput): Task
+    updateTask(input : TaskInput ,id : ID):Task
+    deleteTask(id:ID):String
+}
+
+
+type Task {
+    id: ID
+    title: String
+    description: String
+    status: String
+    assignableTo: String
+    error:String
+}
+
+input TaskInput {
+    title: String
+    description: String
+    status: String
+    assignableTo: String
 }
