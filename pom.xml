@@ -90,9 +90,30 @@
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-graphql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-java-extended-scalars</artifactId>
+			<version>21.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.graphql-java-kickstart</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>11.1.0</version>
+		</dependency>
 
 <!--		<dependency>-->
+<!--			<groupId>com.graphql-java</groupId>-->
+<!--			<artifactId>graphql-java</artifactId>-->
+<!--			<version>19.0</version>-->
+<!--		</dependency>-->
+
+
+
+		<!--		<dependency>-->
 <!--			<groupId>org.springdoc</groupId>-->
 <!--			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>-->
 <!--			<version>[2.1.0,)</version>-->
@@ -210,8 +231,22 @@
 				<type>pom</type>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
 
+	</dependencyManagement>
+	<repositories>
+		<!-- Default Maven Central Repository (usually pre-configured) -->
+		<repository>
+			<id>central</id>
+			<name>Maven Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<build>
 		<plugins>
 			<plugin>
