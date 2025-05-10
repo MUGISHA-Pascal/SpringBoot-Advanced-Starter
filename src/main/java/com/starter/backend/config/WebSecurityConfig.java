@@ -88,6 +88,7 @@ public class WebSecurityConfig {
                                 new AntPathRequestMatcher("/webjars/**"),
                                 new AntPathRequestMatcher("/api/v1/auth/**"),
                                 new AntPathRequestMatcher("/api/v1/products/**"),
+                                new AntPathRequestMatcher("/api/v1/files/**"),
                                 new AntPathRequestMatcher("/api/v1/users/**")
                                 ).permitAll()
                         .anyRequest().authenticated()
