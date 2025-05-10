@@ -15,5 +15,5 @@ public class File {
     private UUID id;
     private String filename;
     @Lob
-    private Byte[] file;
+    private byte[] file;
 }
