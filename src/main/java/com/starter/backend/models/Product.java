@@ -1,9 +1,6 @@
 package com.starter.backend.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +21,9 @@ public class Product {
     private String description;
     private int price;
     private int quantity;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inventory_id",referencedColumnName = "id")
+    private Inventory inventory;
     private String category;
     public Product(String name, String description, int price, int quantity, String category) {
         this.name = name;
