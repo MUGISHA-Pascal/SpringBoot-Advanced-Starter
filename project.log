@@ -1,0 +1,54 @@
+2025-05-18T20:44:01.213+02:00  INFO 12314 --- [backend] [restartedMain] com.starter.backend.BackendApplication   : Starting BackendApplication using Java 23.0.2 with PID 12314 (/media/pascal/AE86B21786B1E04F/Users/pc/Documents/projects/github-workshop/SpringBoot-Advanced-Starter/target/classes started by pascal in /media/pascal/AE86B21786B1E04F/Users/pc/Documents/projects/github-workshop/SpringBoot-Advanced-Starter)
+2025-05-18T20:44:01.230+02:00  INFO 12314 --- [backend] [restartedMain] com.starter.backend.BackendApplication   : The following 1 profile is active: "dev"
+2025-05-18T20:44:01.526+02:00  INFO 12314 --- [backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-18T20:44:01.528+02:00  INFO 12314 --- [backend] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-18T20:44:08.039+02:00  INFO 12314 --- [backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-18T20:44:08.980+02:00  INFO 12314 --- [backend] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 890 ms. Found 6 JPA repository interfaces.
+2025-05-18T20:44:12.580+02:00  INFO 12314 --- [backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-18T20:44:12.625+02:00  INFO 12314 --- [backend] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-18T20:44:12.630+02:00  INFO 12314 --- [backend] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-18T20:44:12.752+02:00  INFO 12314 --- [backend] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-18T20:44:12.754+02:00  INFO 12314 --- [backend] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11223 ms
+2025-05-18T20:44:14.268+02:00  INFO 12314 --- [backend] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-18T20:44:14.499+02:00  INFO 12314 --- [backend] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-05-18T20:44:14.633+02:00  INFO 12314 --- [backend] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-18T20:44:15.669+02:00  INFO 12314 --- [backend] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-18T20:44:15.777+02:00  INFO 12314 --- [backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-18T20:44:17.075+02:00  INFO 12314 --- [backend] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55bdb086
+2025-05-18T20:44:17.084+02:00  INFO 12314 --- [backend] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-18T20:44:17.220+02:00  WARN 12314 --- [backend] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-18T20:44:17.321+02:00  INFO 12314 --- [backend] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-18T20:44:21.383+02:00  INFO 12314 --- [backend] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-18T20:44:22.282+02:00  INFO 12314 --- [backend] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-18T20:44:24.978+02:00  INFO 12314 --- [backend] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-18T20:44:24.980+02:00  WARN 12314 --- [backend] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-18T20:44:26.831+02:00  INFO 12314 --- [backend] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-18T20:44:30.430+02:00  WARN 12314 --- [backend] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-18T20:44:37.383+02:00  INFO 12314 --- [backend] [restartedMain] efaultSchemaResourceGraphQlSourceBuilder : Loaded 1 resource(s) in the GraphQL schema.
+2025-05-18T20:44:39.157+02:00  INFO 12314 --- [backend] [restartedMain] o.s.b.a.g.GraphQlAutoConfiguration       : GraphQL schema inspection:
+	Unmapped fields: {Task=[assignableTo, error]}
+	Unmapped registrations: {}
+	Unmapped arguments: {}
+	Skipped types: []
+2025-05-18T20:44:39.601+02:00  INFO 12314 --- [backend] [restartedMain] s.b.a.g.s.GraphQlWebMvcAutoConfiguration : GraphQL endpoint HTTP POST /graphql
+2025-05-18T20:44:42.753+02:00  INFO 12314 --- [backend] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-18T20:44:52.505+02:00  INFO 12314 --- [backend] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-18T20:44:52.910+02:00  INFO 12314 --- [backend] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-05-18T20:44:52.916+02:00  INFO 12314 --- [backend] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5f32afb2]]
+2025-05-18T20:44:52.921+02:00  INFO 12314 --- [backend] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-05-18T20:44:53.011+02:00  INFO 12314 --- [backend] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-18T20:44:53.080+02:00  INFO 12314 --- [backend] [restartedMain] com.starter.backend.BackendApplication   : Started BackendApplication in 53.675 seconds (process running for 56.541)
+2025-05-18T20:44:56.203+02:00  INFO 12314 --- [backend] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-18T20:44:56.205+02:00  INFO 12314 --- [backend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-18T20:44:56.221+02:00  INFO 12314 --- [backend] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2025-05-18T20:45:04.560+02:00  INFO 12314 --- [backend] [http-nio-8081-exec-2] c.starter.backend.aspects.LoggingAspect  : Entering method: Product com.starter.backend.controllers.ProductController.addProduct(ProductDto) with arguements : [ProductDto(name=car Product, description=A sample product description., price=16, quantity=50, category=Electronics, inventory=com.starter.backend.dtos.UpdateInventoryDto@3daea839)]
+2025-05-18T20:45:04.591+02:00  INFO 12314 --- [backend] [http-nio-8081-exec-2] c.starter.backend.aspects.LoggingAspect  : Entering method: Product com.starter.backend.services.ProductService.addProduct(ProductDto) with arguements : [ProductDto(name=car Product, description=A sample product description., price=16, quantity=50, category=Electronics, inventory=com.starter.backend.dtos.UpdateInventoryDto@3daea839)]
+2025-05-18T20:45:05.425+02:00  INFO 12314 --- [backend] [http-nio-8081-exec-2] c.starter.backend.aspects.LoggingAspect  : Exiting method: Product com.starter.backend.services.ProductService.addProduct(ProductDto) with result : com.starter.backend.models.Product@bc4b254
+2025-05-18T20:45:05.429+02:00  INFO 12314 --- [backend] [http-nio-8081-exec-2] c.starter.backend.aspects.LoggingAspect  : Exiting method: Product com.starter.backend.controllers.ProductController.addProduct(ProductDto) with result : com.starter.backend.models.Product@bc4b254
