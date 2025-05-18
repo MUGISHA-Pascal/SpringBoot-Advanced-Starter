@@ -42,6 +42,7 @@ public class ProductController {
 
     @PostMapping
     public Product addProduct(@RequestBody ProductDto productDto){
+        System.out.println("product log in controller"+productDto.getInventory().getLocation());
         return productService.addProduct(productDto);
     }
 

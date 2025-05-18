@@ -28,12 +28,15 @@ public class ProductService {
     }
 
     public Product addProduct(ProductDto productDto){
+        System.out.println("product log in service"+productDto.getInventory().getLocation());
         Product product = new Product(
                 productDto.getName(),
                 productDto.getDescription(),
                 productDto.getPrice(),
                 productDto.getQuantity(),
-                productDto.getCategory()
+                productDto.getCategory(),
+                productDto.getInventory().getLocation(),
+                productDto.getInventory().getQuantity()
         );
         return productRepository.save(product);
     }
