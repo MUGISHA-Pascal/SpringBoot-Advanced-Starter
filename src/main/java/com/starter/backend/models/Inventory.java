@@ -1,5 +1,6 @@
 package com.starter.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class Inventory {
     private int quantity;
     private String location;
     @OneToOne(mappedBy = "inventory")
+    @JsonIgnore
     private Product product;
     @CreatedDate
     private LocalDateTime createdAt;
