@@ -98,9 +98,29 @@
 			<version>2.15.2</version> <!-- use your Jackson version -->
 		</dependency>
 		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>java-dataloader</artifactId>
+			<version>5.0.0</version> <!-- Use the latest version -->
 		</dependency>
+
+
+		<!--				<dependency>-->
+<!--			<groupId>org.dataloader</groupId>-->
+<!--			<artifactId>java-dataloader</artifactId>-->
+<!--			<version>3.2.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.graphql-java</groupId>-->
+<!--			<artifactId>java-dataloader</artifactId>-->
+<!--			<version>3.1.2</version>-->
+<!--		</dependency>-->
+
+
+		<!--		<dependency>-->
+<!--			<groupId>org.flywaydb</groupId>-->
+<!--			<artifactId>flyway-core</artifactId>-->
+<!--			<version>10.22.0</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -286,6 +306,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.flywaydb</groupId>-->
+<!--				<artifactId>flyway-maven-plugin</artifactId>-->
+<!--				<version>10.22.0</version>-->
+<!--				<configuration>-->
+<!--					<url>jdbc:postgresql://localhost:5432/javadb</url>-->
+<!--					<user>postgres</user>-->
+<!--					<password>postgres</password>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>

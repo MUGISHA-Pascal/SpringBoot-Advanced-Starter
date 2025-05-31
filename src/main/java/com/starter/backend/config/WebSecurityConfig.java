@@ -27,7 +27,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
-public class WebSecurityConfig {
+public class  WebSecurityConfig {
 
     @Autowired
     private CustomUserDetailsService userService;
