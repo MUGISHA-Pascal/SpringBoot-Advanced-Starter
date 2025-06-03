@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 		<!-- Spring Boot Starter Web -->
 		<dependency>
@@ -101,6 +101,10 @@
 			<groupId>com.graphql-java</groupId>
 			<artifactId>java-dataloader</artifactId>
 			<version>5.0.0</version> <!-- Use the latest version -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
 
