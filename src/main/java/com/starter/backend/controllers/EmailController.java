@@ -13,8 +13,8 @@ public class EmailController {
  @Autowired
  private EmailService emailService;
  @PostMapping("/send")
-    public String sendEmail(@RequestParam String to, @RequestParam String subject, @RequestParam String body){
-     emailService.sendSimpleMessage(to, subject, body);
+    public String sendEmail(@RequestParam String to, @RequestParam String subject, @RequestParam String text){
+     emailService.sendSimpleMessage(to, subject, text);
      return "Email sent successfully";
  }
 }
