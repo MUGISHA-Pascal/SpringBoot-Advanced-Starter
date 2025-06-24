@@ -1,0 +1,19 @@
+# Development Dockerfile with Maven for hot reloading
+FROM maven:3.9.6-eclipse-temurin-21
+
+WORKDIR /app
+
+# Copy pom.xml first for better layer caching
+COPY pom.xml .
+
+# Download dependencies
+RUN mvn dependency:go-offline -B
+
+# Copy source code
+COPY src ./src
+
+# Expose ports
+EXPOSE 8080 5005
+
+# Default command for development
+CMD ["mvn", "spring-boot:run"] 
